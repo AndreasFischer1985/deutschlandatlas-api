@@ -5,7 +5,7 @@ Informationen zu allen [Indikatoren](https://www.deutschlandatlas.bund.de/DE/Ser
 
 
 ## query
-Im JSON-Format lassen sich die Daten zu ausgewählten Indikatoren über einen GET-request folgender Machart stellen:
+Im JSON-Format lassen sich aktuelle und historische Daten zu ausgewählten Indikatoren über GET-requests folgender Machart erhalten:
 
 ```
 https://www.karto365.de/hosting/rest/services/{table}/MapServer/0/query?f=json&where=1%3D1&outFields=*&returnGeometry=false
