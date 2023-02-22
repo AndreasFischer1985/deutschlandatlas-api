@@ -5,9 +5,6 @@ Informationen zu allen [Indikatoren](https://www.deutschlandatlas.bund.de/DE/Ser
 
 
 ## query
-
-**URL:** https://www.gis-idmz.nrw.de/arcgis/rest/services/stba/regionalatlas/MapServer/dynamicLayer/query
-
 Im JSON-Format lassen sich die Daten zu ausgewählten Indikatoren über einen GET-request folgender Machart stellen:
 
 ```
