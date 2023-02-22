@@ -13,9 +13,9 @@ https://www.karto365.de/hosting/rest/services/{table}/MapServer/0/query?f=json&w
 
 Dabei ist *{table}* der Name der angefragten Tabelle (z.B. p_apo_f_ZA2022).
 
-Weitere Parameter finden sich weiter unten aufgelistet.
+Angaben zu allen online vorliegenden Tabellen (vgl. [hier](https://www.karto365.de/portal/sharing/rest/search?q=deutschlandatlas&f=json&num=100&start=1) und [hier](https://www.karto365.de/portal/sharing/rest/search?q=deutschlandatlas&f=json&num=100&start=101)) und den zentralen enthaltenen Daten (sog. "outFields") finden sich in folgender Tabelle.
 
-Angaben zu allen online vorliegenden Tabellen (vgl. [hier](https://www.karto365.de/portal/sharing/rest/search?q=deutschlandatlas&f=json&num=100&start=1) und [hier](https://www.karto365.de/portal/sharing/rest/search?q=deutschlandatlas&f=json&num=100&start=101)) und den zentralen enthaltenen Daten (sog. "outFields") finden sich in folgender Tabelle:
+Weitere Parameter finden sich unter der Tabelle aufgelistet und erläutert.
 
 |table|snippet|url|outField|
 |---|---|---|---|
