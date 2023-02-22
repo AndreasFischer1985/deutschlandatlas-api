@@ -22,7 +22,6 @@ Angaben zu allen online vorliegenden Tabellen (vgl. [hier](https://www.karto365.
 
 |table|snippet|url|outField|
 |---|---|---|---|
-|Basemap_light|Basemap_light|https://www.karto365.de/hosting/rest/services/Basemap_light/MapServer||
 |bev_ausl_HA2021|Anteil der Ausländer__innen an der Gesamtbevölkerung im Jahr 2019 in %, bev_ausl_HA2021|https://www.karto365.de/hosting/rest/services/bev_ausl_HA2021/MapServer|bev_ausl|
 |ko_kasskred_HA2021|Kommunale Kassenkredite je Einwohner__in im Jahr 2019 in €, ko_kasskred_HA2021|https://www.karto365.de/hosting/rest/services/ko_kasskred_HA2021/MapServer|ko_kasskred|
 |bev_ue65_ZA2022|Anteil der 65_Jährigen und Älteren an der Gesamtbevölkerung im Jahr 2020 in _|https://www.karto365.de/hosting/rest/services/bev_ue65_ZA2022/MapServer|bev_ue65|
