@@ -1,0 +1,86 @@
+openapi: '3.0.0'
+info:
+  title: 'Deutschlandatlas-API'
+  description: |
+   Der [Deutschlandatlas](https://www.deutschlandatlas.bund.de/DE/Home/home_node.html) ist ein Internetangebot, herausgegeben vom Bundesministerium für Wohnen, Stadtentwicklung und Bauwesen. Dort finden sich interaktive Karten zu gleichwertigen Lebensverhältnissen auf Grundlage aktueller verfügbarer Daten.
+   Informationen zu allen [Indikatoren](https://www.deutschlandatlas.bund.de/DE/Service/Downloads/Indikatoren_Deutschlandatlas.html) sowie aktuelle Daten in [tabellarischer Form](https://www.deutschlandatlas.bund.de/DE/Service/Downloads/downloads_node.html) stehen online zum Download bereit.
+  version: '1.0.0'  
+
+servers:
+  - url: 'https://www.karto365.de/hosting/rest/services'
+     
+paths:
+  /{table}/MapServer/0/query:
+    get:
+      summary: query
+      description: |
+        Im JSON-Format lassen sich aktuelle und historische Daten zu ausgewählten Indikatoren über GET-requests folgender Machart erhalten
+
+      operationId: query
+      responses:
+        '200':
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Response'
+      parameters:
+
+        - in: path
+          name: table
+          required: true          
+          schema:        
+            type: string
+            default: 'p_apo_f_ZA2022'
+          description: |
+             
+             Angaben zu allen online vorliegenden Tabellen finden sich [hier](https://www.karto365.de/portal/sharing/rest/search?q=deutschlandatlas&f=json&num=100&start=1) und [hier](https://www.karto365.de/portal/sharing/rest/search?q=deutschlandatlas&f=json&num=100&start=101)
+
+        - in: query
+          name: where
+          required: true          
+          schema:        
+            type: string
+            default: '1%3D1'
+          example: '1%3D1'
+          description: Spezifikation einer gewünschten Teilmenge der Daten (z.B.'1=1').
+
+        - in: query
+          name: f       
+          schema:
+            type: string
+          description: Output-Format (z.B. 'json' oder 'html').
+          example: 'json'
+          required: true
+          
+        - in: query
+          name: outFields        
+          schema:
+            type: string
+          description: Auszugebende Variablen/fields (z.B. '*').
+          example: '*'
+          required: false
+                    
+        - in: query
+          name: returnGeometry
+          schema:
+            type: boolean
+          description: Boolsche Angabe, ob Angaben zur Geometrie gesendet werden sollen (z.B. 'false').
+          example: false
+          required: false
+          
+        - in: query
+          name: spatialRel
+          schema:
+            type: string
+          description: spational relation (z.B. 'esriSpatialRelIntersects').
+          example: 'esriSpatialRelIntersects'
+          required: false
+
+components:
+  schemas:                      
+    Response:
+      type: object
+externalDocs:
+  description: "Weiterführende Dokumentation"
+  url: "https://github.com/AndreasFischer1985/deutschlandatlas-api"
